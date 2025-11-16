@@ -1,0 +1,14 @@
+{
+  "name": "moot",
+  "displayName": "moot",
+  "plugins": [
+    "expo-maps",
+
+    [
+      "expo-calendar",
+      {
+        "calendarPermission": "The app needs to access your calendar."
+      }
+    ]
+  ]
+}
