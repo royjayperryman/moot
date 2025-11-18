@@ -27,6 +27,7 @@ export default function BottomNavigation() {
     >
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Explore" component={MatchesScreen} />
+      <Tab.Screen name="Chat" component={ProfileScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
       <Tab.Screen name="Account" component={ProfileScreen} />
     </Tab.Navigator>

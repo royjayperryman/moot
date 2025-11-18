@@ -3,7 +3,6 @@
   "displayName": "moot",
   "plugins": [
     "expo-maps",
-
     [
       "expo-calendar",
       {

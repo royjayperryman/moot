@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 import ProfileSlideshow from '../components/ProfileSlideshow';
 import { GlassView } from 'expo-glass-effect';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import { MootIcons } from '../../constants/MootIcons';
 
 export default function HomeScreen() {
   const insets = useSafeAreaInsets();
@@ -20,8 +21,9 @@ export default function HomeScreen() {
           borderRadius: 12,
         }}
       >
-        <View style={{ padding: 16 }}>
+        <View style={{ flexDirection: 'row', padding: 16 }}>
           <Text>Compatibility</Text>
+          <MootIcons.AccountBoxEditOutline />
         </View>
       </GlassView>
     </View>
