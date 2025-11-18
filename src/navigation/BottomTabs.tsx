@@ -22,22 +22,13 @@ export const BottomTabs = (props: BottomTabBarProps) => {
       <Container
         style={styles.glassContainer}
         glassEffectStyle="regular"
-        tintColor="#ffffff50"
+        tintColor="#ff881909"
       >
         <View style={styles.tabRow}>
           {state.routes.map((route, index) => {
             const { options } = descriptors[route.key];
             const label = options.tabBarLabel ?? options.title ?? route.name;
             const isFocused = state.index === index;
-            let iconName = 'ellipse';
-
-            if (route.name === 'Home') {
-              iconName = isFocused ? 'home' : 'home-outline';
-            } else if (route.name === 'Dashboard') {
-              iconName = isFocused ? 'stats-chart' : 'stats-chart-outline';
-            } else if (route.name === 'Profile') {
-              iconName = isFocused ? 'person' : 'person-outline';
-            }
 
             const onPress = () => {
               const event = navigation.emit({
@@ -129,57 +120,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     gap: 0,
   },
-  glass1: {
-    width: 60,
-    height: 60,
-    borderRadius: 30,
-  },
-  glass2: {
-    width: 50,
-    height: 50,
-    borderRadius: 25,
-  },
-  glass3: {
-    width: 40,
-    height: 40,
-    borderRadius: 20,
-  },
-  card: {
-    flex: 1,
-    borderRadius: 24,
-    padding: 54,
-    backgroundColor: 'green',
-    justifyContent: 'center',
-    alignItems: 'center',
-    shadowColor: '#000',
-    shadowOpacity: 0.1,
-    shadowOffset: { width: 0, height: 4 },
-    shadowRadius: 8,
-    elevation: 3,
-  },
-  text: { fontSize: 20, fontWeight: '600' },
-
-  screen: {
-    flex: 1,
-    backgroundColor: '#f4f4f4',
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
-  glassContainerHome: {
-    position: 'absolute',
-    bottom: Platform.OS === 'ios' ? 32 : 16,
-    left: 16,
-    right: 0,
-    width: 76,
-    borderRadius: 32,
-    overflow: 'hidden',
-    // shadow for iOS & elevation for Android
-    shadowColor: '#000',
-    shadowOpacity: 0.12,
-    shadowRadius: 10,
-    shadowOffset: { width: 0, height: 4 },
-    elevation: 8,
-  },
   glassContainer: {
     position: 'absolute',
     bottom: Platform.OS === 'ios' ? 32 : 16,
@@ -197,7 +137,7 @@ const styles = StyleSheet.create({
   tabRow: {
     flexDirection: 'row',
     justifyContent: 'space-around',
-    paddingVertical: 8,
+    paddingVertical: 18,
   },
   tabButton: {
     alignItems: 'center',

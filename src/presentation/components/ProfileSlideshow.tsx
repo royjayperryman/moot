@@ -84,7 +84,7 @@ export default function ProfileSlideshow() {
             </CrossfadeImage>
             <GlassView glassEffectStyle="regular" style={styles.fill} />
             <View style={styles.content}>
-                <CrossfadeImage style={styles.image} source={images[index]} resizeMode="cover" />
+                <CrossfadeImage duration={1000} style={styles.image} source={images[index]} resizeMode="cover" />
             </View>
         </View>
     );
@@ -93,7 +93,7 @@ export default function ProfileSlideshow() {
 const { width, height } = Dimensions.get("window");
 const styles = StyleSheet.create({
     content: { margin: 16, height: "100%", alignItems: 'center', justifyContent: 'center' }, image: { width: '100%', aspectRatio: 1, borderRadius: 10 },
-    container: { flex: 1, backgroundColor: "#000" },
+    container: { flex: 1 },
     fill: {
         position: "absolute",
         width,

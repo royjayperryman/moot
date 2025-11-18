@@ -6,7 +6,7 @@ import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import { MootIcons } from '../../constants/MootIcons';
 import { useMootTheme } from '../../context/ThemeProvider';
 
-export default function HomeScreen() {
+export default function OnboardingScreen() {
   const insets = useSafeAreaInsets();
   const { theme } = useMootTheme();
 

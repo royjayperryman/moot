@@ -9,17 +9,21 @@ import {
 } from '@gorhom/bottom-sheet';
 
 import DrawerNavigation from './src/navigation/DrawerNavigation';
+import { AppContext } from './src/context/AppContext';
+import MainNavigation from './src/navigation/MainNavigation';
 
 function App(): React.JSX.Element {
   const navigationRef = useNavigationContainerRef();
 
   return (
     <GestureHandlerRootView>
-      <NavigationContainer ref={navigationRef}>
-        <BottomSheetModalProvider>
-          <DrawerNavigation />
-        </BottomSheetModalProvider>
-      </NavigationContainer>
+      <AppContext>
+        <NavigationContainer ref={navigationRef}>
+          <BottomSheetModalProvider>
+            <MainNavigation />
+          </BottomSheetModalProvider>
+        </NavigationContainer>
+      </AppContext>
     </GestureHandlerRootView>
   );
 }
