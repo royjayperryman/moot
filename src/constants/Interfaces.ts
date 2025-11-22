@@ -209,6 +209,7 @@ export interface Conversation {
   userBId: UserId;
   createdAt: string;
   lastMessageAt: string | null;
+  lastMessage: string | null;
 }
 
 export interface Message {

@@ -9,10 +9,12 @@ import {
 } from 'react-native';
 import { MootIcons } from '../constants/MootIcons';
 import React from 'react';
+import { useTheme } from 'react-native-paper';
 
 export const BottomTabs = (props: BottomTabBarProps) => {
   const { state, descriptors, navigation } = props;
   const glassSupported = isLiquidGlassAvailable();
+  const theme = useTheme();
 
   const Container: any =
     glassSupported && Platform.OS === 'ios' ? GlassView : View;
@@ -22,7 +24,7 @@ export const BottomTabs = (props: BottomTabBarProps) => {
       <Container
         style={styles.glassContainer}
         glassEffectStyle="regular"
-        tintColor="#ff881909"
+        tintColor={'rgba(193, 132, 11, 0.25)'}
       >
         <View style={styles.tabRow}>
           {state.routes.map((route, index) => {
@@ -40,8 +42,8 @@ export const BottomTabs = (props: BottomTabBarProps) => {
               }
             };
 
-            const focusColor = 'black';
-            const unfocusColor = 'grey';
+            const focusColor = 'orange';
+            const unfocusColor = 'white';
 
             const getIcon = (label, isFocused) => {
               switch (label) {

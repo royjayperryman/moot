@@ -1,0 +1,9 @@
+    {
+      "editor.defaultFormatter": null, // Set to null for global default
+      "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      },
+      "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+      }
+    }
